@@ -54,6 +54,3 @@
     (try first-guess))
   
 ; x --> log10(1000) / log10(x)
-
-(define (fixed-point f first-guess) (define (close-enough? v1 v2) (< (abs (- v1 v2)) tolerance)) (define (try guess) (print guess) (let ((next (f guess))) (if (close-enough? guess next) next (try next)))) (try first-guess))
-(define (print guess) (newline) (newline) (display "guess: ") (display guess))
